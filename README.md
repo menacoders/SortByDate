@@ -1,5 +1,6 @@
 # SortByDate
 Magento 2 Module that add sorting by Date within the Catalog view Toolbar sorting dropdown instead of having to toggle ASC/DESC using the up and down arrows.
+عرض المنتجات في التصنيفات حسب التاريخ من الاحدث الى الاقدم في ماجنتو 2
 
 ## Installment
 * Upload the files in app/code/Mohdibra/SortByDate directory
