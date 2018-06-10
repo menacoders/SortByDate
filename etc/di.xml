@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Mohammed Ibrahim
+ * @copyright Copyright (c) 2018 Mohdibra
+ * @package Mohdibra_SortByDate
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Config">
+        <plugin name="Mohdibra_SortByDate::addCustomOptions" type="Mohdibra\SortByDate\Plugin\Model\Config" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\ProductList\Toolbar">
+        <plugin name="Mohdibra_SortByDate::addPriceDecendingFilterInToolbar" type="Mohdibra\SortByDate\Plugin\Product\ProductList\Toolbar" />
+    </type>
+</config>
