@@ -24,4 +24,4 @@ php bin/magento cache:flush
 * More customizations.
 
 ## Help
-If you come across any bugs or issues please use the issue tracker or contact me via Email geek.php@hotmail.com
+If you come across any bugs or issues please use the issue tracker or contact me via Email mohammed@magentoar.com
