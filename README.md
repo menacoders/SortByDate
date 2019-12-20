@@ -24,4 +24,10 @@ php bin/magento cache:flush
 * More customizations.
 
 ## Help
-If you come across any bugs or issues please use the issue tracker or contact me via Email mohammed@magentoar.com
+If you come across any bugs or issues please use the issue tracker or contact me via Email hello@menacoders.com
+
+## Contact Us
+للتواصل معنا لطلب خدمات تطوير وتخصيصات متاجر ماجنتو راسلنا عبر البريد الالكتروني
+for Bussiness Inquires support@menacoders.com
+
+www.menacoders.com
