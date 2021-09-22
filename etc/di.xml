@@ -12,6 +12,6 @@
         <plugin name="Mohdibra_SortByDate::addCustomOptions" type="Mohdibra\SortByDate\Plugin\Model\Config" />
     </type>
     <type name="Magento\Catalog\Block\Product\ProductList\Toolbar">
-        <plugin name="Mohdibra_SortByDate::addPriceDecendingFilterInToolbar" type="Mohdibra\SortByDate\Plugin\Product\ProductList\Toolbar" />
+        <plugin name="catalog_productlist_toolbar_plugin" type="Mohdibra\SortByDate\Plugin\Product\ProductList\Toolbar" />
     </type>
 </config>
