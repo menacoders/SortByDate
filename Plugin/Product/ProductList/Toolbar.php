@@ -1,39 +1,24 @@
 <?php
 /*
  * Copyright © 2018 Mohammed Ibrahim. All rights reserved.
-	* geek.php@hotmail.com
+	* hello@mohdibra.com
  */
 namespace Mohdibra\SortByDate\Plugin\Product\ProductList;
 
-/**
- * Class Toolbar
- * @package Mohdibra\SortByDate\Plugin\Product\ProductList
- */
+use Magento\Catalog\Block\Product\ProductList\Toolbar as Productdata;
+ 
 class Toolbar
 {
-	/**
-	 * Plugin
-	 *
-	 * @param \Magento\Catalog\Block\Product\ProductList\Toolbar $subject
-	 * @param \Closure $proceed
-	 * @param \Magento\Framework\Data\Collection $collection
-	 * @return \Magento\Catalog\Block\Product\ProductList\Toolbar
-	 */
-	public function aroundSetCollection(
-		\Magento\Catalog\Block\Product\ProductList\Toolbar $subject,
-		\Closure $proceed,
-		$collection
-	) {
-	
-	$currentOrder = $subject->getCurrentOrder();
-        $result = $proceed($collection);
-
+    public function aroundSetCollection(Productdata $subject, \Closure $proceed, $collection)
+    {
+        $currentOrder = $subject->getCurrentOrder();
         if ($currentOrder) {
-            if ($currentOrder == 'created_at') {
-                $subject->getCollection()->setOrder('created_at', 'desc');
+            if ($currentOrder == "newest_product") {
+                $direction = $subject->getCurrentDirection();
+                $collection->getSelect()->order('created_at ' . $direction);
             }
+            return $proceed($collection);
         }
-
-        return $result;
-	}
+    }
 }
+
